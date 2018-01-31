@@ -3,15 +3,7 @@ import Paper from 'material-ui/Paper';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/Menu/MenuItem';
 import Divider from 'material-ui/Divider';
-// import {
-//   ContentCopy,
-//   Delete,
-//   Download,
-//   ContentLink,
-//   PersonAdd,
-//   RemoveRedEye
-// } from 'material-ui/SvgIcon';
-import Icon from 'material-ui/Icon';
+import { NavLink } from 'react-router-dom';
 
 const style = {
   paper: {
@@ -28,34 +20,17 @@ const style = {
 const NavBar = () => (
   <div>
     <Paper style={style.paper}>
-      <Menu open={true}>
-        <MenuItem primaryText="Preview" />
-        <MenuItem primaryText="Share" />
-        <MenuItem primaryText="Get links" />
+      <Menu open>
+        <MenuItem>
+          <NavLink to="#">Home</NavLink>
+        </MenuItem>
+        <MenuItem>
+          <NavLink to="#">Teste</NavLink>
+        </MenuItem>
+        <MenuItem>
+          <NavLink to="#">Teste2</NavLink>
+        </MenuItem>
         <Divider />
-        <MenuItem primaryText="Make a copy" />
-        <MenuItem primaryText="Download" />
-        <Divider />
-        <MenuItem primaryText="Remove" />
-      </Menu>
-    </Paper>
-    <Paper style={style.paper}>
-      <Menu>
-        <MenuItem primaryText="Clear Config" />
-        <MenuItem primaryText="New Config" />
-        <MenuItem
-          primaryText="Project"
-          rightIcon={<Icon className="material-icons">settings</Icon>}
-        />
-        <MenuItem primaryText="Workspace" />
-        <MenuItem
-          primaryText="Paragraph"
-          rightIcon={<b style={style.rightIcon}>¶</b>}
-        />
-        <MenuItem
-          primaryText="Section"
-          rightIcon={<b style={style.rightIcon}>§</b>}
-        />
       </Menu>
     </Paper>
   </div>
