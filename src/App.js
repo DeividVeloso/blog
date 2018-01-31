@@ -9,10 +9,10 @@ class App extends Component {
     return (
       <div>
         <div className="row">
-          <div className="col-2">
+          <div className="col-sm-2 col-xs-12">
             <NavBar />
           </div>
-          <div className="col-8">
+          <div className="offset-sm-2 col-sm-8 col-xs-12">
             <div className="container-fluid">
               <Routes />
             </div>

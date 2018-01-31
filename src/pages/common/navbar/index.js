@@ -1,67 +1,132 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Paper from 'material-ui/Paper';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/Menu/MenuItem';
+import Divider from 'material-ui/Divider';
+// import {
+//   ContentCopy,
+//   Delete,
+//   Download,
+//   ContentLink,
+//   PersonAdd,
+//   RemoveRedEye
+// } from 'material-ui/SvgIcon';
+import Icon from 'material-ui/Icon';
 
-const NavBar = () => {
-  return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top navbar-main">
-      <NavLink className="navbar-brand" to="/">
-        Navbar
-      </NavLink>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
-
-      <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul className="navbar-nav mr-auto flex-column">
-          <li className="nav-item active">
-            <NavLink className="nav-link" to="/">
-              Home <span className="sr-only">(current)</span>
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="#">
-              Link
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link disabled" to="#">
-              Disabled
-            </NavLink>
-          </li>
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="http://example.com"
-              id="dropdown01"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div className="dropdown-menu" aria-labelledby="dropdown01">
-              <NavLink className="dropdown-item" to="#">
-                Action
-              </NavLink>
-              <NavLink className="dropdown-item" to="#">
-                Another action
-              </NavLink>
-              <NavLink className="dropdown-item" to="#">
-                Something else here
-              </NavLink>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
+const style = {
+  paper: {
+    display: 'inline-block',
+    float: 'left',
+    margin: '16px 32px 16px 0'
+  },
+  rightIcon: {
+    textAlign: 'center',
+    lineHeight: '24px'
+  }
 };
+
+const NavBar = () => (
+  <div>
+    <Paper style={style.paper}>
+      <Menu open={true}>
+        <MenuItem primaryText="Preview" />
+        <MenuItem primaryText="Share" />
+        <MenuItem primaryText="Get links" />
+        <Divider />
+        <MenuItem primaryText="Make a copy" />
+        <MenuItem primaryText="Download" />
+        <Divider />
+        <MenuItem primaryText="Remove" />
+      </Menu>
+    </Paper>
+    <Paper style={style.paper}>
+      <Menu>
+        <MenuItem primaryText="Clear Config" />
+        <MenuItem primaryText="New Config" />
+        <MenuItem
+          primaryText="Project"
+          rightIcon={<Icon className="material-icons">settings</Icon>}
+        />
+        <MenuItem primaryText="Workspace" />
+        <MenuItem
+          primaryText="Paragraph"
+          rightIcon={<b style={style.rightIcon}>¶</b>}
+        />
+        <MenuItem
+          primaryText="Section"
+          rightIcon={<b style={style.rightIcon}>§</b>}
+        />
+      </Menu>
+    </Paper>
+  </div>
+);
+
 export default NavBar;
+
+// import React from 'react';
+// import { NavLink } from 'react-router-dom';
+
+// const NavBar = () => {
+//   return (
+//     <nav className="navbar navbar-expand-md navbar-dark bg-dark navbar-main main-navbar">
+//       <NavLink className="navbar-brand" to="/">
+//         Navbar
+//       </NavLink>
+//       <button
+//         className="navbar-toggler"
+//         type="button"
+//         data-toggle="collapse"
+//         data-target="#navbarsExampleDefault"
+//         aria-controls="navbarsExampleDefault"
+//         aria-expanded="false"
+//         aria-label="Toggle navigation"
+//       >
+//         <span className="navbar-toggler-icon" />
+//       </button>
+
+//       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
+//         <ul className="navbar-nav mr-auto flex-column">
+//           <li className="nav-item active">
+//             <NavLink className="nav-link" to="/">
+//               Home <span className="sr-only">(current)</span>
+//             </NavLink>
+//           </li>
+//           <li className="nav-item">
+//             <NavLink className="nav-link" to="#">
+//               Link
+//             </NavLink>
+//           </li>
+//           <li className="nav-item">
+//             <NavLink className="nav-link disabled" to="#">
+//               Disabled
+//             </NavLink>
+//           </li>
+//           <li className="nav-item dropdown">
+//             <a
+//               className="nav-link dropdown-toggle"
+//               href="http://example.com"
+//               id="dropdown01"
+//               data-toggle="dropdown"
+//               aria-haspopup="true"
+//               aria-expanded="false"
+//             >
+//               Dropdown
+//             </a>
+//             <div className="dropdown-menu" aria-labelledby="dropdown01">
+//               <NavLink className="dropdown-item" to="#">
+//                 Action
+//               </NavLink>
+//               <NavLink className="dropdown-item" to="#">
+//                 Another action
+//               </NavLink>
+//               <NavLink className="dropdown-item" to="#">
+//                 Something else here
+//               </NavLink>
+//             </div>
+//           </li>
+//         </ul>
+//       </div>
+//     </nav>
+//   );
+// };
+// export default NavBar;
