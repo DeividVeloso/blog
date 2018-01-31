@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const Posts = () => (
   <div>
-    <h1>
-        Teste Post
-    </h1>
+    <h1>Teste Post</h1>
+    <ul>
+      <li> Primeiro </li>
+      <li> Segundo </li>
+    </ul>
   </div>
 );
 

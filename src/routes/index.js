@@ -1,12 +1,11 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import Posts from "../pages/posts/";
-import App from "../App";
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Posts from '../pages/posts/';
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={App} />
-    <Route path="/users" component={Posts} />
+    <Route exact path="/" component={Posts} />
+    <Route path="/posts" component={Posts} />
     <Redirect from="*" to="/" />
   </Switch>
 );

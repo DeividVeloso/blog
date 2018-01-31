@@ -3,7 +3,6 @@ module.exports = {
   plugins: ["jest"],
   rules: {
     semi: "off",
-    quotes: ["error", "double"],
     "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
     "react/prefer-stateless-function": 0,
     "import/no-extraneous-dependencies": 0,
