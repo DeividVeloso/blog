@@ -18,14 +18,11 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    // "lint": "node_modules/.bin/eslint lint ./src/*.js",
-    // "lint:fix": "npm run lint --fix",
     "start": "react-scripts start --env=developement.env",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "test:coverage": "react-scripts test --env=jsdom --coverage",
-    "eject": "react-scripts eject"//,
-    //"precommit": "npm run lint"
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "bootstrap": "^4.0.0",
