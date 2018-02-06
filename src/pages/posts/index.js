@@ -1,4 +1,7 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
+
+import eu from '../../assets/images/eu.jpg';
 
 const Posts = () => (
   <div>
@@ -43,8 +46,9 @@ const Posts = () => (
 
     <p>
       Procuro repassar meu conhecimento para a comunidade. Para isso, já dei
-      diversas palestras e mantenho um blog.
+      diversas palestras e mantenho um <NavLink to="/blog">blog</NavLink>.
     </p>
+    <img src={eu} alt="Foto de João da Silva"></img>
   </div>
 );
 
