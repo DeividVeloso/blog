@@ -18,6 +18,9 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <footer>
+            &copy; João da Silva 2018
+        </footer>
       </div>
     );
   }
