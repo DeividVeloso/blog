@@ -65,7 +65,7 @@ const Posts = () => (
         diversas palestras e mantenho um <NavLink to="/blog">blog</NavLink>.
       </p>
     </main>
-    <img src={eu} alt="Foto de João da Silva" />
+    {/* <img src={eu} alt="Foto de João da Silva" /> */}
 
     <aside>
       <h1>João da Silva</h1>
