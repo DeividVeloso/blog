@@ -24,6 +24,10 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20
+  },
+  appBarSize: {
+    width: "25%",
+    heigth: "25%"
   }
 };
 
@@ -42,10 +46,10 @@ class ButtonAppBar extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Grid direction={"row"} justify={"center"} container className={classes.root}>
-        <Grid item xs={12}>
-          <Grid>
-            {this.state.isShowing ? <SideMenu /> : null}
+      <div className={classes.root}>
+        <Grid direction={"row"} justify={"center"} container>
+          <Grid>{this.state.isShowing ? <SideMenu /> : null}</Grid>
+          <Grid className={classes.flex}>
             <AppBar position="static">
               <Toolbar>
                 <IconButton
@@ -67,7 +71,28 @@ class ButtonAppBar extends Component {
             </AppBar>
           </Grid>
         </Grid>
-      </Grid>
+        <Grid>
+          <p>
+            <p>Talihina Sky</p>
+            <p>
+              Weeds blow tall on a broken train track Ruth B. draws we're fixin'
+              to get high Maybe we'll hit the bluffs and find ourselves the same
+              old rum
+            </p>
+            <p>
+              But everybody says this place is beautiful And you'd be so crazy
+              to say goodbye But everything's the same this town is pitiful And
+              I'll be gettin' out as soon as I can fly
+            </p>
+            <p>
+              Life goes by on a Talihina sky The hopped up boys are lookin' for
+              their trouble The knocked up girls, well they've all got their
+              share Ruth seems out of her mind, swears she won't give in this
+              time
+            </p>
+          </p>
+        </Grid>
+      </div>
     );
   }
 }
