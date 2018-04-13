@@ -30,6 +30,10 @@ const styles = theme => ({
     heigth: "25%"
   },
   sideMenu: {
+    border: '3px solid red',
+    flex:1,
+    position: 'absolute',
+    top: '62px',
     [theme.breakpoints.down('426')]: {
         border: '3px solid red',
         flex:1,
