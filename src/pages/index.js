@@ -64,7 +64,7 @@ class ButtonAppBar extends Component {
                   color="inherit"
                   className={classes.flex}
                 >
-                  Title
+                  Devilin
                 </Typography>
                 <Button color="inherit">Login</Button>
               </Toolbar>
