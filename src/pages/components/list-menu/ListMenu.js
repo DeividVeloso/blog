@@ -18,7 +18,7 @@ export const mailFolderListItems = (
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Inbox" />
+        <ListItemText primary="Produtos" />
       </ListItem>
     </Link>
 
