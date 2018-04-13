@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import eu from '../../assets/images/eu.jpg';
 
 const Posts = () => (
   <div>
