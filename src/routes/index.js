@@ -1,15 +1,13 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import Pages from '../pages/'
-import Posts from '../pages/posts/';
-import Blog from '../pages/blog/';
+import Main from '../pages/main'
+import Products from '../pages/products'
+
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={Pages} />
-    <Route exact path="/post2" component={Posts} />
-    <Route path="/posts" component={Posts} />
-    <Route path="/blog" component={Blog} />
+    {/* <Route exact path="/" component={Main} /> */}
+    <Route exact path="/" component={Products} />
     <Redirect from="*" to="/" />
   </Switch>
 );
