@@ -10,7 +10,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Grid from "material-ui/Grid";
 import SideMenu from "./common/side-menu/SideMenu";
 
-const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1
   },
@@ -28,8 +28,16 @@ const styles = {
   appBarSize: {
     width: "25%",
     heigth: "25%"
+  },
+  sideMenu: {
+    [theme.breakpoints.down('426')]: {
+        border: '3px solid red',
+        flex:1,
+        position: 'absolute',
+        top: '53px'
+      },
   }
-};
+});
 
 class ButtonAppBar extends Component {
   constructor(props) {
@@ -48,7 +56,7 @@ class ButtonAppBar extends Component {
     return (
       <div className={classes.root}>
         <Grid direction={"row"} justify={"center"} container>
-          <Grid>{this.state.isShowing ? <SideMenu /> : null}</Grid>
+          <Grid>{this.state.isShowing ? <Grid item xs={12} className={classes.sideMenu}><SideMenu /></Grid>: null}</Grid>
           <Grid className={classes.flex}>
             <AppBar position="static">
               <Toolbar>
@@ -64,7 +72,7 @@ class ButtonAppBar extends Component {
                   color="inherit"
                   className={classes.flex}
                 >
-                  Devilin
+                  *** Devilin ***
                 </Typography>
                 <Button color="inherit">Login</Button>
               </Toolbar>
