@@ -1,31 +1,50 @@
 import React, { Component } from "react";
-import { Provider } from "react-redux";
+
 import { BrowserRouter } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
 import CssBaseline from "material-ui/CssBaseline";
 import "typeface-roboto";
 import { connect } from "react-redux";
-import { store } from "store";
+
+import { changeTheme } from "store/actions/theme";
 import Routes from "./routes";
 
-const theme = createMuiTheme({
-  palette: {
-    type: "light" // Switching the dark mode on is a single property value change.
-  }
-});
-
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: createMuiTheme({
+        palette: {
+          type: "light" // Switching the dark mode on is a single property value change.
+        }
+      })
+    }
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.theme.type !== prevState.theme.palette.type) {
+      const theme = createMuiTheme({
+        palette: {
+          type: nextProps.theme.type // Switching the dark mode on is a single property value change.
+        }
+      });
+
+      return { theme }
+    }
+  }
+
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
+      <MuiThemeProvider theme={this.state.theme}>
         <CssBaseline />
-        <Provider store={store}>
-          <BrowserRouter>
-            <Routes />
-          </BrowserRouter>
-        </Provider>
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
       </MuiThemeProvider>
     );
   }
 }
-export default App;
+const mapStateToProps = state => {
+  return { theme: state.theme };
+};
+export default connect(mapStateToProps)(App);

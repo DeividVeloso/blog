@@ -12,10 +12,8 @@ import IconButton from "material-ui/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import {
-  mailFolderListItems,
-  otherMailFolderListItems
-} from "pages/components/list-menu/ListMenu";
+import MailFolderListItems from "pages/components/list-menu/MailFolderListItems";
+import OtherMainFolderListItems from "pages/components/list-menu/OtherMainFolderListItems";
 
 const drawerWidth = 240;
 
@@ -69,7 +67,13 @@ const styles = theme => ({
       width: theme.spacing.unit * 9
     }
   },
- 
+  toolbar: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    padding: "0 8px",
+    ...theme.mixins.toolbar
+  },
 });
 
 class MiniDrawer extends React.Component {
@@ -135,9 +139,13 @@ class MiniDrawer extends React.Component {
           </div>
           <Divider />
 
-          <List>{mailFolderListItems}</List>
+          <List>
+            <MailFolderListItems />
+          </List>
           <Divider />
-          <List>{otherMailFolderListItems}</List>
+          <List>
+            <OtherMainFolderListItems />
+          </List>
         </Drawer>
 
         {children}
