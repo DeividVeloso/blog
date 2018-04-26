@@ -1,40 +1,36 @@
 import React from "react";
 import { withStyles } from "material-ui/styles";
+import Typography from "material-ui/Typography";
+import Header from "../header/Header";
 
 const drawerWidth = 280;
 
 const styles = theme => ({
-  box: {
-    backgroundColor: "red",
-    borderColor: "red",
-    borderWidth: "5px",
-    [theme.breakpoints.up("md")]: {
-      position: "absolute",
-      marginLeft: drawerWidth,
-      width: `calc(100% - ${drawerWidth}px)`
-    }
+  toolbar: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    padding: "0 8px",
+    ...theme.mixins.toolbar
   },
   content: {
-    backgroundColor: "green",
-    borderColor: "green",
-    borderWidth: "5px",
-    //backgroundColor: '#fafafa',
-    margin: '0 auto',
-    maxWidth: 1140,
-    paddingTop: '1em',
-    paddingBottom: '1em',
-    [theme.breakpoints.up('sm')]: {
-      height: 'calc(100% - 64px)',
-      padding: '1em',
-    },
-  },
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.default,
+    padding: theme.spacing.unit * 3
+  }
 });
 
 function MainLayout({ children, classes }) {
   return (
-    <div className={classes.box}>
-      <main className={classes.content}>{children}</main>
-    </div>
+    <Header>
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
+        <Typography noWrap>
+          {"You think water moves fast? You should see ice."}
+        </Typography>
+        {children}
+      </main>
+    </Header>
   );
 }
 export default withStyles(styles)(MainLayout);
