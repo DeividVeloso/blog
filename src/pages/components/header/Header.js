@@ -15,7 +15,7 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import {
   mailFolderListItems,
   otherMailFolderListItems
-} from "../list-menu/ListMenu";
+} from "pages/components/list-menu/ListMenu";
 
 const drawerWidth = 240;
 

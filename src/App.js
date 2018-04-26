@@ -5,9 +5,7 @@ import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
 import CssBaseline from "material-ui/CssBaseline";
 import "typeface-roboto";
 import { connect } from "react-redux";
-
-import { store } from "./store/store";
-
+import { store } from "store";
 import Routes from "./routes";
 
 const theme = createMuiTheme({

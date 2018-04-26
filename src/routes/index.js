@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import MainLayout from "../pages/components/layout/Main";
-import Main from "../pages/main";
-import Products from "../pages/products";
+import MainLayout from "pages/components/layout/Main";
+import Main from "pages/main";
+import Products from "pages/products";
 import { CssBaseline } from "material-ui";
 import RoutePublic from './RoutePublic';
 

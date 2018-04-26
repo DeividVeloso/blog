@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles } from "material-ui/styles";
 import Typography from "material-ui/Typography";
-import Header from "../header/Header";
+import Header from "pages/components/header/Header";
 
 const drawerWidth = 280;
 

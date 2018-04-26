@@ -1,5 +1,5 @@
 import React from "react";
-import Card from '../components/card/Card'
+import Card from 'pages/components/card/Card'
 
 const Main = () => (
     <div>
