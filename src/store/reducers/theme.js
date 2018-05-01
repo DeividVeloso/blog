@@ -1,7 +1,8 @@
 import { CHANGE_THEME } from "store/actions-type";
 
 const INITIAL_STATE = {
-  type: "light"
+  swipe: true,
+  type: 'light'
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -9,7 +10,8 @@ export default function(state = INITIAL_STATE, action) {
     case CHANGE_THEME:
       return {
           ...state,
-          type: action.payload
+          type: action.payload.type,
+          swipe: action.payload.swipe
       }
 
     default:
