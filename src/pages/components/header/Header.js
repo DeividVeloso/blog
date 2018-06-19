@@ -114,7 +114,7 @@ class MiniDrawer extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit" noWrap>
-              Mini variant drawer
+              Programador de Guerrilha
             </Typography>
           </Toolbar>
         </AppBar>

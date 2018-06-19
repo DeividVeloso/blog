@@ -14,7 +14,6 @@ import { createMuiTheme } from "material-ui/styles";
 
 const OtherMailFolderListItems = props => {
   const handleChangeTheme = () => {
-    console.log('swipe', props.theme.swipe)
     const payload = {
       swipe: !props.theme.swipe
     }
@@ -22,30 +21,17 @@ const OtherMailFolderListItems = props => {
   };
   return (
     <div>
-      <ListItem button>
-        <ListItemIcon>
-          <MailIcon />
-        </ListItemIcon>
-        <ListItemText primary="All mail" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <DeleteIcon />
-        </ListItemIcon>
-        <ListItemText primary="Trash" />
-      </ListItem>
       <ListItem button onClick={() => handleChangeTheme()}>
         <ListItemIcon>
           <ReportIcon />
         </ListItemIcon>
-        <ListItemText primary="Spam" />
+        <ListItemText primary="Trocar Tema" />
       </ListItem>
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     theme: state.theme
   }

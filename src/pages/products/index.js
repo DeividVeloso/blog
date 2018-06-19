@@ -1,10 +1,8 @@
 import React from "react";
-import MainLayout from "../components/layout/Main";
+import Card from '../components/card/Card'
 const Products = () => (
-    <div>
-      <p>Olá</p>
-      <p>Teste</p>
-      <p>Doido</p>
-    </div>
+  <div>
+    <Card></Card>
+  </div>
 );
 export default Products;
