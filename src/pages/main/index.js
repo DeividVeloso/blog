@@ -5,8 +5,8 @@ const Main = () => (
   <div style = {{ marginTop: 35 }}>
     <iframe
       frameborder={0}
-      height={500}
-      width={800}
+      height={800}
+      width={1000}
       src="https://safe-ridge-32911.herokuapp.com/"
     />
     </div >

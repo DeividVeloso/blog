@@ -1,7 +1,7 @@
 import React from "react";
 import Card from '../components/card/Card'
 const Products = () => (
-  <div>
+  <div style = {{ marginTop: 50 }}>
     <Card></Card>
   </div>
 );
