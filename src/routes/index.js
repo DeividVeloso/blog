@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import MainLayout from "pages/components/layout/Main";
 import Home from "pages/Home";
+import Politics from "pages/Politics";
 import Products from "pages/Products";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import RoutePublic from './RoutePublic';
@@ -34,6 +35,13 @@ const Routes = () => (
       type={RoutePublic}
       component={Home}
       title="Estudos"
+    />
+    <CustomRoute
+      exact
+      path="/politics"
+      type={RoutePublic}
+      component={Politics}
+      title="Política de Adesão"
     />
     <Route
       exact
