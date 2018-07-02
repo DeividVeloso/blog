@@ -43,7 +43,14 @@ const Routes = () => (
       component={Politics}
       title="Política de Adesão"
     />
-    <Route
+    <CustomRoute
+      exact
+      path="/products"
+      type={RoutePublic}
+      component={Products}
+      title="Produtos"
+    />
+    {/* <Route
       exact
       path="/products"
       component={props => (
@@ -51,7 +58,7 @@ const Routes = () => (
           <Products {...props} />
         </MainLayout>
       )}
-    />
+    /> */}
     <Redirect from="*" to="/" />
   </Switch>
 );
