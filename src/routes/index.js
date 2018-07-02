@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import MainLayout from "pages/components/layout/Main";
+//import MainLayout from "pages/components/layout/Main";
 import Home from "pages/Home";
 import Politics from "pages/Politics";
-import Products from "pages/Products";
+//import Products from "pages/Products";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import RoutePublic from './RoutePublic';
 import Screen from 'pages/components/Screen'
@@ -42,13 +42,13 @@ const Routes = () => (
       component={Politics}
       title="Política de Adesão"
     />
-    <CustomRoute
+    {/* <CustomRoute
       exact
       path="/products"
       type={RoutePublic}
       component={Products}
       title="Produtos"
-    />
+    /> */}
     {/* <Route
       exact
       path="/products"
