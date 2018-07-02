@@ -10,7 +10,6 @@ import Screen from 'pages/components/Screen'
 
 const CustomRoute = ({
   component: Component,
-  layout: Layout,
   type: RouteType,
   ...rest
 }) => (
