@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import MainLayout from "pages/components/layout/Main";
-import Main from "pages/main";
-import Products from "pages/products";
-import { CssBaseline } from "material-ui";
+import Home from "pages/Home";
+import Products from "pages/Products";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import RoutePublic from './RoutePublic';
+import Screen from 'pages/components/Screen'
 
 const CustomRoute = ({
   component: Component,
@@ -12,27 +13,27 @@ const CustomRoute = ({
   type: RouteType,
   ...rest
 }) => (
-  <Route
-    {...rest}
-    render={props => (
-      <RouteType>
-        <Layout>
+    <Route
+      {...rest}
+      render={props => (
+        <RouteType>
           <CssBaseline />
-          <Component {...props} />
-        </Layout>
-      </RouteType>
-    )}
-  />
-);
+          <Screen title={rest.title}>
+            <Component {...props} />
+          </Screen>
+        </RouteType>
+      )}
+    />
+  );
 
 const Routes = () => (
   <Switch>
     <CustomRoute
       exact
       path="/"
-      layout={MainLayout}
       type={RoutePublic}
-      component={Main}
+      component={Home}
+      title="Estudos"
     />
     <Route
       exact
@@ -46,13 +47,5 @@ const Routes = () => (
     <Redirect from="*" to="/" />
   </Switch>
 );
-
-// const Routes = () => (
-//   <Switch>
-//     <Route exact path="/" component={Main} />
-//     <Route exact path="/products" component={(props) => <MainLayout><Products {...props} /></MainLayout> } />
-//     <Redirect from="*" to="/" />
-//   </Switch>
-// );
 
 export default Routes;

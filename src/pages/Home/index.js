@@ -1,5 +1,5 @@
 import React from "react";
-import Card from 'pages/components/card/Card'
+import Card from 'pages/components/Card'
 
 const Main = () => (
   <div style = {{ marginTop: 35 }}>

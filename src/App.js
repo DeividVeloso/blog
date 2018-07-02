@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
 import { BrowserRouter } from "react-router-dom";
-import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
-import CssBaseline from "material-ui/CssBaseline";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "typeface-roboto";
 import { connect } from "react-redux";
 
@@ -36,7 +35,6 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={this.state.theme}>
-        <CssBaseline />
         <BrowserRouter>
           <Routes />
         </BrowserRouter>

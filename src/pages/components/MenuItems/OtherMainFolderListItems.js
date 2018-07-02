@@ -1,5 +1,5 @@
 import React from "react";
-import { ListItem, ListItemIcon, ListItemText } from "material-ui/List";
+import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core/List";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import StarIcon from "@material-ui/icons/Star";
@@ -10,7 +10,7 @@ import ReportIcon from "@material-ui/icons/Report";
 import { withRouter, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { changeTheme } from "store/actions/theme";
-import { createMuiTheme } from "material-ui/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
 
 const OtherMailFolderListItems = props => {
   const handleChangeTheme = () => {
